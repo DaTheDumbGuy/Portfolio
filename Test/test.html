@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="test.css" />
+    <title>Document</title>
+    <style>
+      .test {
+        position: sticky;
+        z-index: 1;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+        text-align: center;
+        border: 2px solid black;
+        animation: Test2 2s forwards;
+        /* transition: Test 0.5s ease; */
+      }
+
+      .test.scrolled {
+        box-shadow: 0 2px 4px rgba(67, 67, 203, 0.3);
+        /* transition: all 0.5s ease; */
+        /* transition: Test 0.5s ease; */
+        animation: Test 2s forwards;
+      }
+      @keyframes Test {
+        0% {
+          height: 20vh;
+        }
+        100% {
+          height: 12vh;
+        }
+      }
+      @keyframes Test2 {
+        0% {
+          height: 12vh;
+        }
+        100% {
+          height: 20vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="test">Test</div>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+
+    <div class="card-container">
+      <div class="card show">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+      <div class="card">This is a card</div>
+    </div>
+
+    <script src="js/test.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

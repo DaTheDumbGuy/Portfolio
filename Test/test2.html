@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      .container {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn {
+        font-size: 2rem;
+        font-weight: 700;
+        padding: 0.5em 1em;
+        transition: all 0.3s;
+      }
+      .btn:hover {
+        transform: translateY(-10px);
+        background-color: red;
+        color: white;
+      }
+
+      /* Utility classes */
+      .animate {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+      }
+      .animate--infinite {
+        animation-iteration-count: infinite;
+      }
+
+      /* Animations */
+      @keyframes slideInLeft {
+        from {
+          transform: translateX(-300px);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+      .slideInLeft {
+        animation: slideInLeft 1s ease-in forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center" class="heading slideInLeft">
+      Hello, World!
+    </h1>
+
+    <div class="container">
+      <button class="btn">Button</button>
+    </div>
+  </body>
+</html>

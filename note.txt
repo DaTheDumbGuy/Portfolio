@@ -1,0 +1,15 @@
+Creating web process
+    -Mobile -> Tablet -> Laptop
+
+After the layout is done
+    -Learn Keyframes and animation for designing(animate) every section (Done)
+    
+Color Pallete
+    -https://colorhunt.co/palette/635985443c6839305318122b
+
+Web Ideas
+    https://brittanychiang.com/
+    https://bhavya.dev/
+
+text animation
+    https://tobiasahlin.com/moving-letters/

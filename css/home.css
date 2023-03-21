@@ -1,0 +1,266 @@
+*{
+  font-family: 'Abel', sans-serif;
+  color: white;
+}
+body{
+  background-color: #18122B;
+}
+#introduction{
+    height: 40vh;
+    /* padding: 0 10px; */
+   
+}
+#aboutMe, #projects{
+    height: 25vh;
+}
+#contactMe{
+  height: 25vh;
+}
+
+#introduction p {
+    font-size: 1.2rem;
+}
+/* Links */
+
+/* Navigation */
+#navigation{
+  background-color: rgba(24, 18, 43,0.8);
+
+
+}
+.navbar-nav .nav-item .nav-link{
+  position: relative;
+  color: white;
+}
+.navbar-nav .nav-item .nav-link:hover{
+  color: cyan;
+}
+/* .navbar-nav .nav-item{
+  transition: all 0.3s;
+}
+.navbar-nav .nav-item:hover{
+  animation: test 1s;
+  color: cyan;
+}
+@keyframes test {
+  from{
+    border-bottom: 0.2px solid cyan;
+    width: 0;
+  }
+  to{
+    border-bottom: 0.2px solid cyan;
+    width: 10%;
+  }
+} */
+.navbar {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+}
+
+
+.navbar-toggler {
+  width: 20px;
+  height: 20px;
+  position:relative;
+  transition: .5s ease-in-out;
+}
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus{
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+.navbar-toggler span{
+  margin:0;
+  padding:0;
+}
+.toggler-icon{
+  display:block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+.middle-bar{
+  margin-top: 0px;
+}
+
+/* When navigation is clicked */
+.navbar-toggler .top-bar{
+  margin-top:0px;
+  transform: rotate(135deg);
+}
+.navbar-toggler .middle-bar{
+  opacity:0;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar{
+  margin-top: 0;
+  transform: rotate(-135deg);
+}
+
+/* State when the navbar is collapsed */
+
+.navbar-toggler.collapsed .top-bar{
+  margin-top:-20px;
+  transform: rotate(0deg);
+}
+.navbar-toggler.collapsed .middle-bar{
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.navbar-toggler.collapsed .bottom-bar{
+  margin-top:20px;
+  transform: rotate(0deg);
+}
+
+/* Color of 3 lines */
+
+
+
+/* Main */
+.mainSection {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
+
+.mainSection.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card{
+  background-color: #393053;
+   transition: all 0.3s;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+.card-header{
+  font-weight: bold;
+}
+.list-unstyled{
+  opacity: 0.7;
+}
+
+/* Asides */
+#aside{
+  position: relative;
+}
+#asideContainer{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  bottom: 0;
+}
+/* #asideContainer a i {
+  font-size: 24px;
+} */
+#asideContainer a{
+  color: white;
+  font-size: 24px;
+  transition: all 0.3s;
+}
+#asideContainer a:hover{
+  color: cyan;
+  transform: translateY(-3px);
+}
+#asideContainer p {
+  writing-mode: vertical-rl;
+  transform: rotate(0deg);
+}
+/* Utility Class */
+/* .animate{
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+.moveUp{
+  animation-name: moveUpAnimation;
+  animation-timing-function: ease-in;
+}
+@keyframes moveUpAnimation{
+  from{
+    transform: translateY(0);;
+  }to{
+    transform: translateY(-10px);;
+  }
+} */
+
+/* Media Queries */
+@media (max-width:575px){
+    #introduction  h1{
+        font-size:2.5rem;
+    }
+    #introduction p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 576px) {
+    .navbar-nav {
+        width: 100%;
+        margin-top: 20px;
+    }
+    #introduction  h1{
+        font-size: 3rem;
+    }
+ 
+
+  }
+
+
+@media (min-width: 769px) { 
+    .navbar-nav {
+        width: 50%;
+        margin-top: 0px;
+    }
+    #introduction  h1{
+        font-size: 4rem;
+    }
+    #introduction  p{
+        width: 80%;
+    }
+    #contactMeContainer{
+      width:80%;
+      margin: auto;
+    }
+  
+
+
+    
+  
+ }
+
+@media (min-width: 992px) {
+    #introduction  p{
+        width: 50%;
+    }
+    #contactMeContainer{
+      width: 60%;
+      margin: auto;
+    }
+
+}
+
+
+@media (min-width: 1200px) { 
+
+}
+
+
+@media (min-width: 1400px) { 
+
+}
