@@ -27,4 +27,13 @@ const observer = new IntersectionObserver(entries => {
 cards.forEach(card => {
     observer.observe(card);
 })
-
+//Typewriting
+// var typed = new Typed("#nameTyped", {
+//     strings: [
+//         "I build things for the web",
+//         "and am an aspiring software developer"
+//     ],
+//     typeSpeed: 50,
+//     backSpeed: 50,
+//     loop: true,
+// });

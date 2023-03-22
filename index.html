@@ -20,6 +20,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="css/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
     <title>Da</title>
   </head>
   <body>
@@ -85,8 +86,8 @@
             <p class="mt-5 fs-4 mb-0 ps-1" style="color: cyan">
               Hi, my name is -
             </p>
-            <h1>Daryl Bacurin.</h1>
-            <h1>I build things for the web</h1>
+            <h1>Daryl Bacurin</h1>
+            <h1>I build things for the web.</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Eligendi, commodi! Lorem ipsum dolor sit amet consectetur
@@ -98,33 +99,70 @@
           <!-- About me -->
           <div id="aboutMe"></div>
           <section class="mt-5 mainSection">
-            <div class="container py-3">
-              <!-- Header -->
-              <h2 class="me-2 mb-4">About me</h2>
-              <!-- Content -->
-              <div class="">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-                  dignissimos veritatis neque explicabo ex blanditiis? Sed magni
-                  eveniet eius vitae eum corporis vero sit autem, nobis,
-                  incidunt impedit illo, aliquam iure excepturi debitis!
-                  Consequatur optio aspernatur consequuntur, ut ipsam deserunt
-                  impedit tempore accusantium odio cumque quo nihil architecto
-                  eligendi laborum?
-                </p>
-                <p>Here are the technologies that I use:</p>
-                <!-- List of technologies I use -->
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>Bootstrap</li>
-                  <li>JavaScript</li>
-                  <li>Github</li>
-                </ul>
-              </div>
-              <!-- Picture ko -->
-              <div class="d-flex justify-content-center">
-                <img src="#" alt="picture ko" />
+            <div class="container py-3 w-75" id="aboutMeContainer">
+              <div class="row">
+                <div class="col-lg-7">
+                  <h2 class="me-2 mb-4">About me</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nulla bibendum lobortis velit, in faucibus justo ullamcorper
+                    at. Nullam elementum odio eu urna interdum bibendum.
+                  </p>
+                  <p>Here are the technologies that I use:</p>
+                  <ul class="d-flex gap-2 ps-0 flex-wrap">
+                    <li class="list-unstyled">
+                      <span
+                        ><i
+                          class="bi bi-caret-right-fill"
+                          style="color: cyan"
+                        ></i></span
+                      >HTML
+                    </li>
+                    <li class="list-unstyled">
+                      <span
+                        ><i
+                          class="bi bi-caret-right-fill"
+                          style="color: cyan"
+                        ></i></span
+                      >CSS
+                    </li>
+                    <li class="list-unstyled">
+                      <span
+                        ><i
+                          class="bi bi-caret-right-fill"
+                          style="color: cyan"
+                        ></i></span
+                      >Bootstrap
+                    </li>
+                    <li class="list-unstyled">
+                      <span
+                        ><i
+                          class="bi bi-caret-right-fill"
+                          style="color: cyan"
+                        ></i></span
+                      >JavaScript
+                    </li>
+                    <li class="list-unstyled">
+                      <span
+                        ><i
+                          class="bi bi-caret-right-fill"
+                          style="color: cyan"
+                        ></i></span
+                      >Github
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-5">
+                  <div class="profileContainer">
+                    <div class="wrapper">
+                      <img
+                        src="img/Ey.jpeg"
+                        alt="picture ko"
+                        class="img-fluid rounded-2 border border-1 border-info"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
