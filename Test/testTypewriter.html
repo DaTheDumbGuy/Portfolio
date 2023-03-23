@@ -28,6 +28,44 @@
         z-index: -1;
         border: 2px solid cyan;
       }
+      #cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: red;
+        pointer-events: none;
+        z-index: 9999;
+      }
+      /* 1st */
+      /* #ball {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+      }
+
+      #ball:hover {
+        transform: scale(1.2);
+      } */
+      #ball {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+      }
     </style>
   </head>
   <body>
@@ -39,6 +77,8 @@
     <div class="wrapper m-auto">
       <img src="/img/Ey.jpeg" alt="" class="img-fluid" />
     </div>
+    <div id="cursor"></div>
+    <div id="ball"></div>
 
     <script>
       var typed = new Typed("#typed", {
@@ -50,6 +90,82 @@
         backSpeed: 50,
         loop: true,
       });
+      const cursor = document.getElementById("cursor");
+
+      document.addEventListener("mousemove", (event) => {
+        cursor.style.left = event.clientX + "px";
+        cursor.style.top = event.clientY + "px";
+      });
+      const ball = document.getElementById("ball");
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
+
+      let ballX = windowWidth / 2;
+      let ballY = windowHeight / 2;
+
+      document.addEventListener("mousemove", (e) => {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+
+        const distance = Math.sqrt(
+          (mouseX - ballX) ** 2 + (mouseY - ballY) ** 2
+        );
+
+        if (distance < 100) {
+          ballX += (mouseX - ballX) / 20;
+          ballY += (mouseY - ballY) / 20;
+        }
+
+        ball.style.left = ballX + "px";
+        ball.style.top = ballY + "px";
+      });
+
+      // //2nd
+      // const ball = document.getElementById("ball");
+      // const windowWidth = window.innerWidth;
+      // const windowHeight = window.innerHeight;
+      // const ballSize = parseInt(
+      //   getComputedStyle(ball).getPropertyValue("width")
+      // );
+
+      // let ballX = Math.floor(Math.random() * (windowWidth - ballSize));
+      // let ballY = Math.floor(Math.random() * (windowHeight - ballSize));
+      // let ballXDir = 1;
+      // let ballYDir = 1;
+
+      // document.addEventListener("mousemove", (e) => {
+      //   const mouseX = e.clientX;
+      //   const mouseY = e.clientY;
+
+      //   const distance = Math.sqrt(
+      //     (mouseX - ballX) ** 2 + (mouseY - ballY) ** 2
+      //   );
+
+      //   if (distance < 100) {
+      //     ballX += (mouseX - ballX) / 20;
+      //     ballY += (mouseY - ballY) / 20;
+      //   }
+      // });
+
+      // function moveBall() {
+      //   ballX += 5 * ballXDir;
+      //   ballY += 5 * ballYDir;
+
+      //   if (ballX + ballSize >= windowWidth || ballX <= 0) {
+      //     ballXDir *= -1;
+      //   }
+
+      //   if (ballY + ballSize >= windowHeight || ballY <= 0) {
+      //     ballYDir *= -1;
+      //   }
+
+      //   ball.style.left = ballX + "px";
+      //   ball.style.top = ballY + "px";
+
+      //   requestAnimationFrame(moveBall);
+      // }
+
+      // moveBall();
     </script>
   </body>
 </html>

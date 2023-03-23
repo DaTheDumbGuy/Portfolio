@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animation</title>
     <style>
+      #main {
+        display: none;
+      }
+
       .container {
         height: 100vh;
         display: flex;
@@ -48,12 +52,27 @@
     </style>
   </head>
   <body>
-    <h1 style="text-align: center" class="heading slideInLeft">
-      Hello, World!
-    </h1>
-
-    <div class="container">
-      <button class="btn">Button</button>
+    <div id="loading">
+      <p>Loading...</p>
     </div>
+
+    <div id="main">
+      <!-- Your main content here -->
+      <h1 style="text-align: center" class="heading slideInLeft">
+        Hello, World!
+      </h1>
+      <div class="container">
+        <button class="btn">Button</button>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          document.getElementById("main").style.display = "block";
+          document.getElementById("loading").style.display = "none";
+        }, 2000); // Change 2000 to the number of milliseconds you want to delay
+      });
+    </script>
   </body>
 </html>

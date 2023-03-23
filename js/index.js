@@ -1,6 +1,13 @@
 // Get all navbar links
 const navbarLinks = document.querySelectorAll('.navbar-nav a');
 
+
+window.addEventListener("load", function () {
+    setTimeout(function () {
+        document.getElementById("mainPage").style.display = "block";
+        document.getElementById("loading").style.display = "none";
+    }, 4000); // Change 2000 to the number of milliseconds you want to delay
+});
 // Add click event listener to each navbar link
 navbarLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -21,19 +28,43 @@ const observer = new IntersectionObserver(entries => {
         // if (entry.isIntersecting) observer.unobserve(entry.target);
     })
 }, {
-    threshold: 0.1,
+    threshold: getThreshold()
 })
 
+function getThreshold() {
+    const viewportWidth = window.innerWidth;
+    // adjust the threshold based on the viewport width
+    if (viewportWidth < 768) {
+        return 0.1;
+    } else if (viewportWidth < 1100) {
+        return 0.2;
+    } else {
+        return 0.4;
+    }
+}
 cards.forEach(card => {
     observer.observe(card);
 })
-//Typewriting
-// var typed = new Typed("#nameTyped", {
-//     strings: [
-//         "I build things for the web",
-//         "and am an aspiring software developer"
-//     ],
-//     typeSpeed: 50,
-//     backSpeed: 50,
-//     loop: true,
-// });
+// update the threshold whenever the window is resized
+window.addEventListener('resize', () => {
+    observer.thresholds = [getThreshold()];
+});
+
+// Typewriting
+let typed = new Typed("#nameTyped", {
+    strings: [
+        "What's next?",
+        "Hire me!"
+    ],
+    typeSpeed: 100,
+    backSpeed: 100,
+    loop: true,
+});
+let typed2 = new Typed("#loadingType", {
+    strings: [
+        "Loading Test"
+    ],
+    typeSpeed: 88,
+    backSpeed: 100,
+    loop: true,
+});
