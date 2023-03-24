@@ -31,7 +31,6 @@ body{
 #introduction p {
     font-size: 1.2rem;
 }
-/* Links */
 
 /* Navigation */
 #navigation{
@@ -152,16 +151,26 @@ body{
   opacity: 1;
 }
 
-/* Project Test DEsign */
+/* Title per section's '-' */
+#headerSection{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.line{
+  display: inline-block;
+  width: 25%;
+  height: 1px;
+  background-color: grey;
+}
 
 /* Things I've Built */
 .card{
   background-color: #393053;
-   transition: all 0.3s;
+  transition: all 0.3s;
 }
 .card:hover{
-    /* background-image: url('/img/miniProject1.png'); */
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 .card-header{
   font-weight: bold;
@@ -175,6 +184,18 @@ body{
 .wrapper {
   position: relative;
   width: 200px;
+}
+.onTop{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(57, 48, 83, 0.5);
+  transition: all 0.5s;
+}
+.onTop:hover{
+  background-color: rgba(57, 48, 83, 0);
 }
 .wrapper:hover::after{
   transform: translate(-5px, -5px);
@@ -227,6 +248,7 @@ body{
 }
 .projectLinks a{
   color: white;
+  display: inline-block;
   transition: all 0.3s;
 }
 .projectLinks a:hover {
@@ -252,6 +274,13 @@ body{
 
 /* Media Queries */
 @media (max-width:575px){
+ 
+  .line{
+    display: inline-block;
+    width: 20%;
+    height: 1px;
+
+  }
     #introduction  h1{
         font-size:2.5rem;
     }
@@ -276,6 +305,7 @@ body{
     .projectDescriptionContainer{
       padding: 10px!important;
     }
+    
 }
 
 @media (min-width: 576px) {
@@ -298,14 +328,17 @@ body{
 @media (max-width:767px) {
   #projectContent{
     padding: 0;
-    border:2px solid white;
     background-image: url('/img/miniProject1.png');
     background-size: cover;
+    border:2px solid #443C68;
+    border-radius: 10px;
   
   }
   .projectDescriptionContainer{
     padding: 20px;
     background-color: rgba(57, 48, 83, 0.8) ;
+    border-radius: 10px;
+    
   }
   .projectDescription{
     text-align: end;
@@ -350,8 +383,11 @@ body{
     }
     .projectImage {
       position:relative;
+      border: 1px solid rgb(57, 48, 83) ;
       width:70%;
+
     }
+
     .hideImage:hover{
       opacity: 0.2;
     }
@@ -364,9 +400,6 @@ body{
     }
     
 
-
-
-    
   
  }
 

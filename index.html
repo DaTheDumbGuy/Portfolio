@@ -9,10 +9,25 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <!-- First Choice -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Roboto -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    /> -->
+    <!-- Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Open+Sans:ital,wght@0,300;1,300&family=Roboto:wght@300&display=swap"
       rel="stylesheet"
     />
     <link
@@ -58,13 +73,17 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li> -->
               <li class="nav-item">
-                <a class="nav-link" href="#aboutMe" id="test1">About</a>
+                <a class="nav-link" href="#aboutMe" id="aboutMeLink">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#projects" id="test2"> Projects </a>
+                <a class="nav-link" href="#projects" id="projectsLink">
+                  Projects
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contactMe" id="test3">Contact</a>
+                <a class="nav-link" href="#contactMe" id="contactLink"
+                  >Contact</a
+                >
               </li>
               <li class="nav-item">
                 <a href="#" class="btn btn-outline-info">Resume</a>
@@ -110,7 +129,10 @@
               <div class="container py-3 w-75" id="aboutMeContainer">
                 <div class="row">
                   <div class="col-lg-7">
-                    <h2 class="me-2 mb-4">About me</h2>
+                    <header class="mb-5" id="headerSection">
+                      <h2>About Me</h2>
+                      <span class="line"></span>
+                    </header>
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Nulla bibendum lobortis velit, in faucibus justo
@@ -185,6 +207,7 @@
                           alt="picture ko"
                           class="img-fluid rounded-2 border border-1 border-info"
                         />
+                        <div class="onTop"></div>
                       </div>
                     </div>
                   </div>
@@ -195,8 +218,9 @@
             <div style="height: 30vh" id="projects"></div>
             <!-- Big Project-->
             <section class="mainSection" id="activeProjects">
-              <header>
-                <h2>This is the Title</h2>
+              <header class="ps-2 ps-md-4 mb-5" id="headerSection">
+                <h2>Some Things I've Built</h2>
+                <span class="line"></span>
               </header>
               <!-- Big Projects -->
               <div class="container">
@@ -205,7 +229,7 @@
                   class="container-fluid d-md-flex align-items-md-center"
                   id="projectContent"
                 >
-                  <div class="projectImage">
+                  <div class="projectImage rounded-1">
                     <img
                       src="img/miniProject1.png"
                       alt=""
@@ -230,8 +254,8 @@
                     <div
                       class="projectLinks d-flex justify-content-end align-items-center gap-3"
                     >
-                      <a href="#" class="fs-5"><i class="bi bi-github"></i></a>
-                      <a href="#" class="fs-5"
+                      <a href="#" class="fs-4"><i class="bi bi-github"></i></a>
+                      <a href="#" class="fs-4"
                         ><i class="bi bi-box-arrow-up-right"></i
                       ></a>
                     </div>
@@ -256,11 +280,14 @@
                           <div class="fs-1">
                             <i class="bi bi-archive text-info"></i>
                           </div>
-                          <div class="">
-                            <a href="#" class="card-link fs-5"
+                          <div class="projectLinks">
+                            <a
+                              href="#"
+                              class="card-link fs-5"
+                              title="Github Repository"
                               ><i class="bi bi-github"></i
                             ></a>
-                            <a href="#" class="card-link fs-5"
+                            <a href="#" class="card-link fs-5" title="Live Page"
                               ><i class="bi bi-box-arrow-up-right"></i
                             ></a>
                           </div>
@@ -288,11 +315,14 @@
                           <div class="fs-1">
                             <i class="bi bi-archive text-info"></i>
                           </div>
-                          <div class="">
-                            <a href="#" class="card-link fs-5"
+                          <div class="projectLinks">
+                            <a
+                              href="#"
+                              class="card-link fs-5"
+                              title="Github Repository"
                               ><i class="bi bi-github"></i
                             ></a>
-                            <a href="#" class="card-link fs-5"
+                            <a href="#" class="card-link fs-5" title="Live Page"
                               ><i class="bi bi-box-arrow-up-right"></i
                             ></a>
                           </div>
@@ -320,11 +350,14 @@
                           <div class="fs-1">
                             <i class="bi bi-archive text-info"></i>
                           </div>
-                          <div class="">
-                            <a href="#" class="card-link fs-5"
+                          <div class="projectLinks">
+                            <a
+                              href="#"
+                              class="card-link fs-5"
+                              title="Github Repository"
                               ><i class="bi bi-github"></i
                             ></a>
-                            <a href="#" class="card-link fs-5"
+                            <a href="#" class="card-link fs-5" title="Live Page"
                               ><i class="bi bi-box-arrow-up-right"></i
                             ></a>
                           </div>
@@ -352,11 +385,14 @@
                           <div class="fs-1">
                             <i class="bi bi-archive text-info"></i>
                           </div>
-                          <div class="">
-                            <a href="#" class="card-link fs-5"
+                          <div class="projectLinks">
+                            <a
+                              href="#"
+                              class="card-link fs-5"
+                              title="Github Repository"
                               ><i class="bi bi-github"></i
                             ></a>
-                            <a href="#" class="card-link fs-5"
+                            <a href="#" class="card-link fs-5" title="Live Page"
                               ><i class="bi bi-box-arrow-up-right"></i
                             ></a>
                           </div>
@@ -384,11 +420,14 @@
                           <div class="fs-1">
                             <i class="bi bi-archive text-info"></i>
                           </div>
-                          <div class="">
-                            <a href="#" class="card-link fs-5"
+                          <div class="projectLinks">
+                            <a
+                              href="#"
+                              class="card-link fs-5"
+                              title="Github Repository"
                               ><i class="bi bi-github"></i
                             ></a>
-                            <a href="#" class="card-link fs-5"
+                            <a href="#" class="card-link fs-5" title="Live Page"
                               ><i class="bi bi-box-arrow-up-right"></i
                             ></a>
                           </div>
@@ -416,11 +455,14 @@
                           <div class="fs-1">
                             <i class="bi bi-archive text-info"></i>
                           </div>
-                          <div class="">
-                            <a href="#" class="card-link fs-5"
+                          <div class="projectLinks">
+                            <a
+                              href="#"
+                              class="card-link fs-5"
+                              title="Github Repository"
                               ><i class="bi bi-github"></i
                             ></a>
-                            <a href="#" class="card-link fs-5"
+                            <a href="#" class="card-link fs-5" title="Live Page"
                               ><i class="bi bi-box-arrow-up-right"></i
                             ></a>
                           </div>
@@ -466,7 +508,9 @@
                     dolorum beatae amet sapiente ducimus? Ex.
                   </p>
                 </div>
-                <button class="btn btn-outline-info">Say Hello</button>
+                <button id="sayHelloButton" class="btn btn-outline-info">
+                  Say Hello
+                </button>
               </div>
             </section>
           </article>

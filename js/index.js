@@ -5,45 +5,10 @@ const activeAbout = document.querySelector('#activeAbout');
 const activeProjects = document.querySelector('#activeProjects');
 const activeProjects2 = document.querySelector('#activeProjects2');
 const activeContact = document.querySelector('#contactMeContainer');
-const test1 = document.querySelector('#test1');
-const test2 = document.querySelector('#test2');
-const test3 = document.querySelector('#test3');
-//Test Active Status
-// function isElementInViewport(el) {
-//     const rect = el.getBoundingClientRect();
-//     return (
-//         rect.top >= 0 &&
-//         rect.left >= 0 &&
-//         rect.bottom <=
-//         (window.innerHeight || document.documentElement.clientHeight) &&
-//         rect.right <=
-//         (window.innerWidth || document.documentElement.clientWidth)
-//     );
-// }
-// function onScroll() {
-//     if (isElementInViewport(activeAbout)) {
-//         test1.classList.add("text-info");
-//     } else {
-//         if (test1.classList.contains("text-info")) {
-//             test1.classList.remove("text-info");
-//         }
-//     }
-//     if (isElementInViewport(activeProjects)) {
-//         test2.classList.add("text-info");
-//     } else {
-//         if (test2.classList.contains("text-info")) {
-//             test2.classList.remove("text-info");
-//         }
-//     }
-//     if (isElementInViewport(activeContact)) {
-//         test3.classList.add("text-info");
-//     } else {
-//         if (test3.classList.contains("text-info")) {
-//             test3.classList.remove("text-info");
-//         }
-//     }
-// }
-// window.addEventListener("scroll", onScroll);
+const aboutMeLink = document.querySelector('#aboutMeLink');
+const projectsLink = document.querySelector('#projectsLink');
+const contactLink = document.querySelector('#contactLink');
+
 function isElementNearViewport(el, threshold) {
     const rect = el.getBoundingClientRect();
     return (
@@ -54,31 +19,25 @@ function isElementNearViewport(el, threshold) {
 
 function onScroll() {
     if (isElementNearViewport(activeAbout, 100)) {
-        test1.classList.add("active");
+        aboutMeLink.classList.add("active");
     } else {
-        if (test1.classList.contains("active")) {
-            test1.classList.remove("active");
+        if (aboutMeLink.classList.contains("active")) {
+            aboutMeLink.classList.remove("active");
         }
     }
     if (isElementNearViewport(activeProjects, 450)) {
-        test2.classList.add("active");
+        projectsLink.classList.add("active");
     } else {
-        if (test2.classList.contains("active")) {
-            test2.classList.remove("active");
+        if (projectsLink.classList.contains("active")) {
+            projectsLink.classList.remove("active");
         }
     }
-    // if (isElementNearViewport(activeProjects2, 100)) {
-    //     test2.classList.add("text-info");
-    // } else {
-    //     if (test2.classList.contains("text-info")) {
-    //         test2.classList.remove("text-info");
-    //     }
-    // }
+
     if (isElementNearViewport(activeContact, 100)) {
-        test3.classList.add("active");
+        contactLink.classList.add("active");
     } else {
-        if (test3.classList.contains("active")) {
-            test3.classList.remove("active");
+        if (contactLink.classList.contains("active")) {
+            contactLink.classList.remove("active");
         }
     }
 
@@ -90,7 +49,7 @@ window.addEventListener("load", function () {
     setTimeout(function () {
         document.getElementById("mainPage").style.display = "block";
         document.getElementById("loading").style.display = "none";
-    }, 4000); // Change 2000 to the number of milliseconds you want to delay
+    }, 4000); // Change 4000 to the number of milliseconds you want to delay
 });
 // Add click event listener to each navbar link
 navbarLinks.forEach(link => {
@@ -105,7 +64,7 @@ navbarLinks.forEach(link => {
 });
 
 //Lazy Loading
-const cards = document.querySelectorAll(".mainSection");
+const sections = document.querySelectorAll(".mainSection");
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         entry.target.classList.toggle("show", entry.isIntersecting);
@@ -128,8 +87,8 @@ function getThreshold() {
 }
 
 
-cards.forEach(card => {
-    observer.observe(card);
+sections.forEach(section => {
+    observer.observe(section);
 })
 // update the threshold whenever the window is resized
 window.addEventListener('resize', () => {
@@ -153,4 +112,12 @@ let typed2 = new Typed("#loadingType", {
     typeSpeed: 88,
     backSpeed: 100,
     loop: true,
+});
+// Contace Me
+const sayHelloButton = document.getElementById("sayHelloButton");
+
+sayHelloButton.addEventListener("click", () => {
+    const subject = "Greetings!";
+    const body = "Hi there, Thank you for reaching out!";
+    window.location.href = `mailto:darylbacurin14@gmail.com?subject=${subject}&body=${body}`;
 });
