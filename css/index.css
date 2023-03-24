@@ -1,7 +1,7 @@
 *{
   font-family: 'Abel', sans-serif;
-  color: white;
 }
+
 #mainPage {
   display: none;
 }
@@ -14,6 +14,7 @@
 
 body{
   background-color: #18122B;
+  color: white;
 }
 #introduction{
     height: 40vh;
@@ -38,24 +39,26 @@ body{
 
 
 }
-.navbar-nav .nav-item .nav-link{
-  position: relative;
-  color: white;
-}
-.navbar-nav .nav-item .nav-link:hover{
-  color: cyan;
-}
-.navbar-nav .nav-item .nav-link{
-  transition: all 0.4s ease-in-out;
 
+.navbar-nav .nav-item .nav-link{
+  color: white;
+  transition: all 0.4s ease-in-out;
 }
-.navbar-nav .nav-item .nav-link:hover{
-  animation: test 0.4s forwards;
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link.active {
+  animation: bottomShadow 0.4s forwards;
   color: cyan;
 }
-@keyframes test {
+
+.navbar-nav .nav-item .nav-link.active{
+  box-shadow: 0px 2px 0px 0px cyan;
+  transition: all 0.4s ease-in-out;
+}
+
+@keyframes bottomShadow {
   from{
-    box-shadow: 0px 2px 0px 0px cyan;
+    box-shadow: none;
     width: 0;
   }
   to{
@@ -63,6 +66,7 @@ body{
     width: 100%;
   }
 }
+
 .navbar {
   position: sticky;
   z-index: 1;
@@ -135,9 +139,6 @@ body{
   transform: rotate(0deg);
 }
 
-/* Color of 3 lines */
-
-
 
 /* Main */
 .mainSection {
@@ -151,6 +152,9 @@ body{
   opacity: 1;
 }
 
+/* Project Test DEsign */
+
+/* Things I've Built */
 .card{
   background-color: #393053;
    transition: all 0.3s;
@@ -165,8 +169,9 @@ body{
 .list-unstyled{
   opacity: 0.7;
 }
-/* About Me */
 
+
+/* About Me */
 .wrapper {
   position: relative;
   width: 200px;
@@ -220,6 +225,14 @@ body{
   writing-mode: vertical-rl;
   transform: rotate(0deg);
 }
+.projectLinks a{
+  color: white;
+  transition: all 0.3s;
+}
+.projectLinks a:hover {
+  color: cyan;
+  transform:translateY(-3px);
+}
 /* Utility Class */
 /* .animate{
   animation-duration: 0.3s;
@@ -259,6 +272,10 @@ body{
     #introduction{
       margin-top:0!important;
     }
+    /* project Design Test */
+    .projectDescriptionContainer{
+      padding: 10px!important;
+    }
 }
 
 @media (min-width: 576px) {
@@ -278,10 +295,28 @@ body{
  
   }
 
-
-@media (min-width: 769px) { 
+@media (max-width:767px) {
+  #projectContent{
+    padding: 0;
+    border:2px solid white;
+    background-image: url('/img/miniProject1.png');
+    background-size: cover;
+  
+  }
+  .projectDescriptionContainer{
+    padding: 20px;
+    background-color: rgba(57, 48, 83, 0.8) ;
+  }
+  .projectDescription{
+    text-align: end;
+  }
+  .projectImage{
+    display: none;
+  }
+}
+@media (min-width: 768px) { 
     .navbar-nav {
-        width: 50%;
+        width: 80%;
         margin-top: 0px;
     }
     #introduction  h1{
@@ -294,7 +329,40 @@ body{
       width:80%;
       margin: auto;
     }
- 
+    /* Test Design(Projects) */
+    .projectDescriptionContainer{
+      z-index:2;
+      position:absolute;
+      width: 50%;
+      right: 0;
+    }
+    .hideImage{
+      position:absolute;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      top: 0; 
+      left: 0;
+      background-color: rgba(99, 89, 133, 0.5);
+      transition: all 0.3s;
+
+
+    }
+    .projectImage {
+      position:relative;
+      width:70%;
+    }
+    .hideImage:hover{
+      opacity: 0.2;
+    }
+    .projectDescription{
+      background-color: #393053;
+      padding: 20px;
+    }
+    #projectContent{
+      position: relative;
+    }
+    
 
 
 
@@ -303,6 +371,10 @@ body{
  }
 
 @media (min-width: 992px) {
+  .navbar-nav {
+    width: 50%;
+    margin-top: 0px;
+}
     #introduction  p{
         width: 50%;
     }

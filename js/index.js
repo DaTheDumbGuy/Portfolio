@@ -1,7 +1,91 @@
 // Get all navbar links
 const navbarLinks = document.querySelectorAll('.navbar-nav a');
 
+const activeAbout = document.querySelector('#activeAbout');
+const activeProjects = document.querySelector('#activeProjects');
+const activeProjects2 = document.querySelector('#activeProjects2');
+const activeContact = document.querySelector('#contactMeContainer');
+const test1 = document.querySelector('#test1');
+const test2 = document.querySelector('#test2');
+const test3 = document.querySelector('#test3');
+//Test Active Status
+// function isElementInViewport(el) {
+//     const rect = el.getBoundingClientRect();
+//     return (
+//         rect.top >= 0 &&
+//         rect.left >= 0 &&
+//         rect.bottom <=
+//         (window.innerHeight || document.documentElement.clientHeight) &&
+//         rect.right <=
+//         (window.innerWidth || document.documentElement.clientWidth)
+//     );
+// }
+// function onScroll() {
+//     if (isElementInViewport(activeAbout)) {
+//         test1.classList.add("text-info");
+//     } else {
+//         if (test1.classList.contains("text-info")) {
+//             test1.classList.remove("text-info");
+//         }
+//     }
+//     if (isElementInViewport(activeProjects)) {
+//         test2.classList.add("text-info");
+//     } else {
+//         if (test2.classList.contains("text-info")) {
+//             test2.classList.remove("text-info");
+//         }
+//     }
+//     if (isElementInViewport(activeContact)) {
+//         test3.classList.add("text-info");
+//     } else {
+//         if (test3.classList.contains("text-info")) {
+//             test3.classList.remove("text-info");
+//         }
+//     }
+// }
+// window.addEventListener("scroll", onScroll);
+function isElementNearViewport(el, threshold) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top < window.innerHeight - threshold &&
+        rect.bottom > threshold
+    );
+}
 
+function onScroll() {
+    if (isElementNearViewport(activeAbout, 100)) {
+        test1.classList.add("active");
+    } else {
+        if (test1.classList.contains("active")) {
+            test1.classList.remove("active");
+        }
+    }
+    if (isElementNearViewport(activeProjects, 450)) {
+        test2.classList.add("active");
+    } else {
+        if (test2.classList.contains("active")) {
+            test2.classList.remove("active");
+        }
+    }
+    // if (isElementNearViewport(activeProjects2, 100)) {
+    //     test2.classList.add("text-info");
+    // } else {
+    //     if (test2.classList.contains("text-info")) {
+    //         test2.classList.remove("text-info");
+    //     }
+    // }
+    if (isElementNearViewport(activeContact, 100)) {
+        test3.classList.add("active");
+    } else {
+        if (test3.classList.contains("active")) {
+            test3.classList.remove("active");
+        }
+    }
+
+}
+
+window.addEventListener("scroll", onScroll);
+//Loading Screen
 window.addEventListener("load", function () {
     setTimeout(function () {
         document.getElementById("mainPage").style.display = "block";
@@ -42,6 +126,8 @@ function getThreshold() {
         return 0.4;
     }
 }
+
+
 cards.forEach(card => {
     observer.observe(card);
 })

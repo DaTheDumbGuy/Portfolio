@@ -58,13 +58,13 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li> -->
               <li class="nav-item">
-                <a class="nav-link" href="#aboutMe">About</a>
+                <a class="nav-link" href="#aboutMe" id="test1">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#projects"> Projects </a>
+                <a class="nav-link" href="#projects" id="test2"> Projects </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contactMe">Contact</a>
+                <a class="nav-link" href="#contactMe" id="test3">Contact</a>
               </li>
               <li class="nav-item">
                 <a href="#" class="btn btn-outline-info">Resume</a>
@@ -76,6 +76,7 @@
       <!-- main -->
       <main class="container">
         <div class="row row-cols-3">
+          <!-- Left Side fixed -->
           <aside class="col-lg-1 d-none d-lg-flex" id="aside">
             <div id="asideContainer">
               <a href="#" class="mb-lg-2 bi bi-github"></a>
@@ -102,10 +103,10 @@
                 quo.
               </p>
             </section>
-            <div style="height: 30vh"></div>
+            <div style="height: 40vh"></div>
             <!-- About me -->
-            <div id="aboutMe"></div>
-            <section class="mainSection">
+            <div style="height: 20vh" id="aboutMe"></div>
+            <section class="mainSection" id="activeAbout">
               <div class="container py-3 w-75" id="aboutMeContainer">
                 <div class="row">
                   <div class="col-lg-7">
@@ -191,10 +192,55 @@
               </div>
             </section>
             <div style="height: 10vh"></div>
-            <!-- Projects -->
-            <div id="projects" class="mt-5"></div>
-            <section class="mainSection">
+            <div style="height: 30vh" id="projects"></div>
+            <!-- Big Project-->
+            <section class="mainSection" id="activeProjects">
+              <header>
+                <h2>This is the Title</h2>
+              </header>
+              <!-- Big Projects -->
               <div class="container">
+                <!-- This is the content of the project -->
+                <div
+                  class="container-fluid d-md-flex align-items-md-center"
+                  id="projectContent"
+                >
+                  <div class="projectImage">
+                    <img
+                      src="img/miniProject1.png"
+                      alt=""
+                      class="img-fluid z-1"
+                    />
+                    <div class="hideImage"></div>
+                  </div>
+
+                  <div class="projectDescriptionContainer">
+                    <h3 class="text-end">Mini Project One</h3>
+                    <p class="projectDescription">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Repudiandae quia tempore eos sequi illo modi?
+                    </p>
+                    <!-- Used technologies for the project -->
+                    <ul class="d-flex gap-3 ps-0 flex-wrap justify-content-end">
+                      <li class="list-unstyled">HTML</li>
+                      <li class="list-unstyled">CSS</li>
+                      <li class="list-unstyled">Bootstrap</li>
+                    </ul>
+                    <!-- Link for Github and live -->
+                    <div
+                      class="projectLinks d-flex justify-content-end align-items-center gap-3"
+                    >
+                      <a href="#" class="fs-5"><i class="bi bi-github"></i></a>
+                      <a href="#" class="fs-5"
+                        ><i class="bi bi-box-arrow-up-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="height: 5vh"></div>
+              <!-- Small Projects -->
+              <div class="container mt-5">
                 <header class="mb-4 d-flex flex-column align-items-center">
                   <h2 class="">Some things I've Built</h2>
                   <!-- <a href="#" class=" ">View the archieve</a> -->
@@ -395,7 +441,10 @@
                 </div>
               </div>
             </section>
-            <br />
+            <!-- Small Project -->
+            <!-- <div id="projects" class="mt-5"></div> -->
+            <!-- <section class="mainSection" id="activeProjects2"></section> -->
+            <div style="height: 15vh"></div>
             <!-- Contact Me -->
             <div id="contactMe" class="mt-5"></div>
             <section
@@ -421,6 +470,7 @@
               </div>
             </section>
           </article>
+          <!-- Right Side fixed -->
           <aside
             class="col-lg-1 d-none d-lg-flex justify-content-end"
             id="aside"

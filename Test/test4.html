@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: blue;
+        opacity: 0;
+        transition: opacity 1s;
+      }
+      .active {
+        opacity: 1;
+      }
+      ul {
+        position: fixed;
+        display: flex;
+      }
+      ul li {
+        list-style: none;
+      }
+      .addColor {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="tests">Test</li>
+      <li>Test</li>
+      <li>Test</li>
+    </ul>
+    <div style="height: 100vh"></div>
+    <div class="box"></div>
+    <div class="test">Test</div>
+    <script>
+      function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      const box = document.querySelector(".box");
+
+      function onScroll() {
+        if (isElementInViewport(box)) {
+          box.classList.add("active");
+        }
+      }
+
+      window.addEventListener("scroll", onScroll);
+    </script>
+  </body>
+</html>
