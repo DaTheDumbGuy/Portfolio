@@ -18,14 +18,14 @@ function isElementNearViewport(el, threshold) {
 }
 
 function onScroll() {
-    if (isElementNearViewport(activeAbout, 100)) {
+    if (isElementNearViewport(activeAbout, 250)) {
         aboutMeLink.classList.add("active");
     } else {
         if (aboutMeLink.classList.contains("active")) {
             aboutMeLink.classList.remove("active");
         }
     }
-    if (isElementNearViewport(activeProjects, 450)) {
+    if (isElementNearViewport(activeProjects, 400) || isElementNearViewport(activeProjects2, 180)) {
         projectsLink.classList.add("active");
     } else {
         if (projectsLink.classList.contains("active")) {

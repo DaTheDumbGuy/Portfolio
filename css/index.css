@@ -1,6 +1,28 @@
 *{
   font-family: 'Abel', sans-serif;
 }
+/* Scroll Bar */
+/* width and height of the scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* background color of the scrollbar */
+::-webkit-scrollbar-track {
+  background-color: #18122B;
+}
+
+/* color of the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: #888;
+}
+
+/* color of the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: cyan;
+}
 
 #mainPage {
   display: none;
@@ -141,7 +163,7 @@ body{
 
 /* Main */
 .mainSection {
-  transform: translateY(50px);
+  transform: translateY(20px);
   opacity: 0;
   transition: transform 1.5s ease-out, opacity 1.5s ease-out;
 }
@@ -162,6 +184,10 @@ body{
   width: 25%;
   height: 1px;
   background-color: grey;
+}
+/* Space between smol and big project */
+#spcBtwProject{
+  height: 10vh;
 }
 
 /* Things I've Built */
@@ -328,7 +354,7 @@ body{
 @media (max-width:767px) {
   #projectContent{
     padding: 0;
-    background-image: url('/img/miniProject1.png');
+    background-image: url('img/miniProject1.png');
     background-size: cover;
     border:2px solid #443C68;
     border-radius: 10px;
