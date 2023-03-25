@@ -39,19 +39,17 @@ body{
   color: white;
 }
 #introduction{
-    height: 40vh;
-    /* padding: 0 10px; */
-   
+  height: 40vh;
 }
 #aboutMe{
   height: 30vh;
 }
 #projects, #contactMe{
-    height: 25vh;
+  height: 25vh;
 }
 
 #introduction p {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 /* Navigation */
@@ -174,7 +172,7 @@ body{
 }
 
 /* Title per section's '-' */
-#headerSection{
+.headerSection{
   display: flex;
   align-items: center;
   gap: 20px;
@@ -217,7 +215,7 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(57, 48, 83, 0.5);
+  background-color: rgba(57, 48, 83, 0.3);
   transition: all 0.5s;
 }
 .onTop:hover{
@@ -245,10 +243,10 @@ body{
 }
 
 /* Asides */
-#aside{
+aside{
   position: relative;
 }
-#asideContainer{
+.asideContainer{
   position: fixed;
   display: flex;
   align-items: center;
@@ -259,16 +257,16 @@ body{
 /* #asideContainer a i {
   font-size: 24px;
 } */
-#asideContainer a{
+.asideContainer a{
   color: white;
   font-size: 24px;
   transition: all 0.3s;
 }
-#asideContainer a:hover{
+.asideContainer a:hover{
   color: cyan;
   transform: translateY(-3px);
 }
-#asideContainer p {
+.asideContainer p {
   writing-mode: vertical-rl;
   transform: rotate(0deg);
 }
@@ -281,22 +279,6 @@ body{
   color: cyan;
   transform:translateY(-3px);
 }
-/* Utility Class */
-/* .animate{
-  animation-duration: 0.3s;
-  animation-fill-mode: both;
-}
-.moveUp{
-  animation-name: moveUpAnimation;
-  animation-timing-function: ease-in;
-}
-@keyframes moveUpAnimation{
-  from{
-    transform: translateY(0);;
-  }to{
-    transform: translateY(-10px);;
-  }
-} */
 
 /* Media Queries */
 @media (max-width:575px){
@@ -307,7 +289,7 @@ body{
     height: 1px;
 
   }
-    #introduction  h1{
+    #introduction  h2{
         font-size:2.5rem;
     }
     #introduction p {
@@ -339,7 +321,7 @@ body{
         width: 100%;
         margin-top: 20px;
     }
-    #introduction  h1{
+    #introduction  h2{
         font-size: 3rem;
     }
     .profileContainer {
@@ -378,7 +360,7 @@ body{
         width: 80%;
         margin-top: 0px;
     }
-    #introduction  h1{
+    #introduction  h2{
         font-size: 4rem;
     }
     #introduction  p{

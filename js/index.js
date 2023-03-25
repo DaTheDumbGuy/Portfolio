@@ -8,8 +8,67 @@ const activeContact = document.querySelector('#contactMeContainer');
 const aboutMeLink = document.querySelector('#aboutMeLink');
 const projectsLink = document.querySelector('#projectsLink');
 const contactLink = document.querySelector('#contactLink');
+//Intersection Observer API technique
+// const navLinks = document.querySelector('#navLinks');
+// function isElementNearViewport(el, threshold) {
+//     const rect = el.getBoundingClientRect();
+//     return (
+//         rect.top < window.innerHeight - threshold &&
+//         rect.bottom > threshold
+//     );
+// }
 
-function isElementNearViewport(el, threshold) {
+// function debounce(func, wait) {
+//     let timeout;
+//     return function executedFunction(...args) {
+//         const later = () => {
+//             timeout = null;
+//             func(...args);
+//         };
+//         clearTimeout(timeout);
+//         timeout = setTimeout(later, wait);
+//     };
+// }
+
+// function onScroll() {
+//     if (isElementNearViewport(activeAbout, 250)) {
+//         aboutMeLink.classList.add('active');
+//     } else if (aboutMeLink.classList.contains('active')) {
+//         aboutMeLink.classList.remove('active');
+//     }
+
+//     if (isElementNearViewport(activeProjects, 400) || isElementNearViewport(activeProjects2, 180)) {
+//         projectsLink.classList.add('active');
+//     } else if (projectsLink.classList.contains('active')) {
+//         projectsLink.classList.remove('active');
+//     }
+
+//     if (isElementNearViewport(activeContact, 100)) {
+//         contactLink.classList.add('active');
+//     } else if (contactLink.classList.contains('active')) {
+//         contactLink.classList.remove('active');
+//     }
+// }
+
+// const debouncedOnScroll = debounce(onScroll, 100);
+
+// navLinks.addEventListener('click', function (event) {
+//     const target = event.target;
+//     if (target.matches('.nav-link')) {
+//         event.preventDefault();
+//         target.classList.add('active');
+//         navLinks.querySelectorAll('.nav-link').forEach(function (link) {
+//             if (link !== target && link.classList.contains('active')) {
+//                 link.classList.remove('active');
+//             }
+//         });
+//     }
+// });
+
+// window.addEventListener('scroll', debouncedOnScroll);
+
+
+function isElementNearViewport(el, threshold) {// "scrollspy" technique.
     const rect = el.getBoundingClientRect();
     return (
         rect.top < window.innerHeight - threshold &&
@@ -44,6 +103,7 @@ function onScroll() {
 }
 
 window.addEventListener("scroll", onScroll);
+
 //Loading Screen
 window.addEventListener("load", function () {
     setTimeout(function () {
@@ -95,6 +155,7 @@ window.addEventListener('resize', () => {
     observer.thresholds = [getThreshold()];
 });
 
+//https://github.com/mattboldt/typed.js
 // Typewriting
 let typed = new Typed("#nameTyped", {
     strings: [

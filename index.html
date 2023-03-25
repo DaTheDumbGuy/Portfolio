@@ -66,6 +66,7 @@
             class="collapse navbar-collapse justify-content-end"
             id="navbarLinks"
           >
+            <!-- Add ID(navLinks) for Intersection Observer API Approach  -->
             <ul
               class="navbar-nav justify-content-around align-items-center row-gap-2 mt-0"
             >
@@ -96,8 +97,8 @@
       <main class="container">
         <div class="row row-cols-3">
           <!-- Left Side fixed -->
-          <aside class="col-lg-1 d-none d-lg-flex" id="aside">
-            <div id="asideContainer">
+          <aside class="col-lg-1 d-none d-lg-flex">
+            <div class="asideContainer">
               <a href="#" class="mb-lg-2 bi bi-github"></a>
               <a href="#" class="mb-lg-2 bi bi-facebook"></a>
               <a href="#" class="mb-lg-2 bi bi-twitter"></a>
@@ -112,8 +113,8 @@
               <p class="mt-5 fs-4 mb-0 ps-1" style="color: cyan">
                 Hi, my name is -
               </p>
-              <h1>Daryl Bacurin</h1>
-              <h1>I build things for the web.</h1>
+              <h2>Daryl Bacurin</h2>
+              <h2>I build things for the web.</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Eligendi, commodi! Lorem ipsum dolor sit amet consectetur
@@ -129,7 +130,7 @@
               <div class="container py-3 w-75" id="aboutMeContainer">
                 <div class="row align-items-center">
                   <div class="col-lg-7">
-                    <header class="mb-5" id="headerSection">
+                    <header class="headerSection mb-5">
                       <h2>About Me</h2>
                       <span class="line"></span>
                     </header>
@@ -218,7 +219,7 @@
             <div style="height: 30vh" id="projects"></div>
             <!-- Big Project-->
             <section class="mainSection" id="activeProjects">
-              <header class="ps-2 ps-md-4 mb-5" id="headerSection">
+              <header class="headerSection ps-2 ps-md-4 mb-5">
                 <h2>Some Things I've Built</h2>
                 <span class="line"></span>
               </header>
@@ -519,11 +520,8 @@
             </section>
           </article>
           <!-- Right Side fixed -->
-          <aside
-            class="col-lg-1 d-none d-lg-flex justify-content-end"
-            id="aside"
-          >
-            <div id="asideContainer">
+          <aside class="col-lg-1 d-none d-lg-flex justify-content-end">
+            <div class="asideContainer">
               <p>darylbacurin14@gmail.com</p>
               <div class="border" style="height: 200px"></div>
             </div>
