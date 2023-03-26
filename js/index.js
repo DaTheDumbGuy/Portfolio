@@ -155,6 +155,52 @@ window.addEventListener('resize', () => {
     observer.thresholds = [getThreshold()];
 });
 
+//LazyloadingV.2 Test
+// const sections = document.querySelectorAll(".mainSection");
+// let observer;
+
+// function createObserver() {
+//     observer = new IntersectionObserver(
+//         entries => {
+//             entries.forEach(entry => {
+//                 entry.target.classList.toggle("show", entry.isIntersecting);
+//                 if (entry.isIntersecting) {
+//                     observer.unobserve(entry.target);
+//                 }
+//             });
+//         },
+//         {
+//             threshold: getThreshold(),
+//         }
+//     );
+
+//     sections.forEach(section => {
+//         observer.observe(section);
+//     });
+// }
+
+// function getThreshold() {
+//     const viewportWidth = window.innerWidth;
+//     if (viewportWidth < 768) {
+//         return 0.1;
+//     } else if (viewportWidth < 1100) {
+//         return 0.2;
+//     } else {
+//         return 0.4;
+//     }
+// }
+
+// createObserver();
+
+// window.addEventListener("resize", () => {
+//     observer.disconnect();
+//     observer.thresholds = [getThreshold()];
+//     sections.forEach(section => {
+//         observer.observe(section);
+//     });
+// });
+
+
 //https://github.com/mattboldt/typed.js
 // Typewriting
 let typed = new Typed("#nameTyped", {

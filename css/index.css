@@ -1,5 +1,5 @@
 *{
-  font-family: 'Abel', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 /* Scroll Bar */
 /* width and height of the scrollbar */
@@ -44,6 +44,7 @@ body{
 #aboutMe{
   height: 30vh;
 }
+
 #projects, #contactMe{
   height: 25vh;
 }
@@ -161,15 +162,41 @@ body{
 
 /* Main */
 .mainSection {
-  transform: translateY(20px);
+  transform: translateY(30px);
   opacity: 0;
-  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+  transition: all 2s ease-out;
 }
 
 .mainSection.show {
   transform: translateY(0);
   opacity: 1;
 }
+/* Higlight */
+.highlight {
+  color: cyan;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.4s ease-in-out;
+}
+
+.highlight::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: cyan;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.2s ease-in-out;
+}
+
+.highlight:hover::before {
+  transform: scaleX(1);
+}
+
+
 
 /* Title per section's '-' */
 .headerSection{
@@ -186,6 +213,10 @@ body{
 /* Space between smol and big project */
 #spcBtwProject{
   height: 10vh;
+}
+
+#aboutMeContainer .row .col-lg-8 p{
+  font-size: 1.1rem;
 }
 
 /* Things I've Built */
@@ -215,7 +246,7 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(57, 48, 83, 0.3);
+  background-color: rgba(57, 48, 83, 0.5);
   transition: all 0.5s;
 }
 .onTop:hover{
@@ -241,6 +272,11 @@ body{
 #nameTyped{
   color: cyan;
 }
+#sayHelloButton{
+  padding: 0.8rem  2rem;
+}
+
+
 
 /* Asides */
 aside{
@@ -306,6 +342,7 @@ aside{
     #aboutMe{
       height: 15vh;
     }
+   
     #introduction{
       margin-top:0!important;
     }
@@ -427,12 +464,16 @@ aside{
       float: right;
       margin-left: 20px; /* add some margin to separate the image from the text */
     }
+ 
 
 }
 
 
 @media (min-width: 1200px) { 
-
+  #aboutMeContainer{
+    width: 80%;
+  }
+ 
 }
 
 
