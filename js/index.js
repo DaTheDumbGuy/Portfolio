@@ -109,7 +109,8 @@ window.addEventListener("load", function () {
     setTimeout(function () {
         document.getElementById("mainPage").style.display = "block";
         document.getElementById("loading").style.display = "none";
-    }, 4000); // Change 4000 to the number of milliseconds you want to delay
+
+    }, 2000); // Change 4000 to the number of milliseconds you want to delay
 });
 // Add click event listener to each navbar link
 navbarLinks.forEach(link => {
@@ -128,7 +129,7 @@ const sections = document.querySelectorAll(".mainSection");
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         entry.target.classList.toggle("show", entry.isIntersecting);
-        // if (entry.isIntersecting) observer.unobserve(entry.target);
+        if (entry.isIntersecting) observer.unobserve(entry.target);
     })
 }, {
     threshold: getThreshold()
@@ -212,14 +213,7 @@ let typed = new Typed("#nameTyped", {
     backSpeed: 100,
     loop: true,
 });
-let typed2 = new Typed("#loadingType", {
-    strings: [
-        "Loading Test"
-    ],
-    typeSpeed: 88,
-    backSpeed: 100,
-    loop: true,
-});
+
 // Contace Me
 const sayHelloButton = document.getElementById("sayHelloButton");
 

@@ -45,7 +45,7 @@
   </head>
   <body>
     <div id="loading">
-      <h1><span id="loadingType"></span></h1>
+      <img src="img/logo.png" alt="" style="width: 120px" />
     </div>
     <div id="mainPage">
       <!-- Navigation -->
@@ -91,9 +91,6 @@
                   >Contact</a
                 >
               </li>
-              <li class="nav-item">
-                <a href="#" class="btn btn-outline-info">Resume</a>
-              </li>
             </ul>
           </div>
         </div>
@@ -128,7 +125,7 @@
               </p>
               <h2>Daryl Bacurin</h2>
               <h2>I build things for the web.</h2>
-              <p class="ps-1">
+              <p class="ps-1 mb-4">
                 I'm an aspiring full-stack developer and presently working to
                 achieve that ambition. Currently, I am training under
                 <span
@@ -141,6 +138,10 @@
                 >
                 boot camp to sharpen my skills.
               </p>
+
+              <button type="button" class="btn btns ms-1">
+                Check Out my CV!
+              </button>
             </section>
             <div style="height: 40vh"></div>
             <!-- About me -->
@@ -160,6 +161,7 @@
                       <a
                         href="https://www.facebook.com/lccdaet/"
                         class="highlight"
+                        target="_blank"
                         >college</a
                       >
                       as a Computer Science student. With little to no
@@ -178,7 +180,12 @@
                     </p>
                     <p>
                       Currently, I'm training under the care of
-                      <a href="https://kodego.ph/" class="highlight">Kodego</a>
+                      <a
+                        href="https://kodego.ph/"
+                        class="highlight"
+                        target="_blank"
+                        >Kodego</a
+                      >
                       boot camp to learn skills to become a full-stack
                       developer.
                     </p>
@@ -259,7 +266,7 @@
             </section>
             <div style="height: 10vh"></div>
             <div style="height: 30vh" id="projects"></div>
-            <!-- Big Project-->
+            <!-- Big Projects-->
             <section class="mainSection" id="activeProjects">
               <header class="headerSection ps-2 ps-md-4 mb-5">
                 <h2>Some Things I've Built</h2>
@@ -291,9 +298,12 @@
                       >
                     </p>
                     <h3 class="text-end">Mini Project One</h3>
-                    <p class="projectDescription">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Repudiandae quia tempore eos sequi illo modi?
+                    <p class="projectDescription text-sm-end text-center">
+                      An E-Magazine about anime. First Project I've ever made
+                      since learning HTML, CSS, and BootStrap. It has five
+                      articles copied from other writers. Its purpose was to
+                      experience creating a responsive website and implement
+                      what I've learned.
                     </p>
                     <!-- Used technologies for the project -->
                     <ul class="d-flex gap-3 ps-0 flex-wrap justify-content-end">
@@ -323,7 +333,7 @@
               </div>
               <!-- Small Projects -->
             </section>
-            <!-- Small Project -->
+            <!-- Small Projects -->
             <div id="spcBtwProject"></div>
             <section class="mainSection" id="activeProjects2">
               <div class="container">
@@ -344,25 +354,31 @@
                           </div>
                           <div class="projectLinks">
                             <a
-                              href="#"
+                              href="https://github.com/DaTheDumbGuy/CalculatorExercise"
                               class="card-link fs-5"
                               title="Github Repository"
+                              target="_blank"
                               ><i class="bi bi-github"></i
                             ></a>
-                            <a href="#" class="card-link fs-5" title="Live Page"
+                            <a
+                              href="https://dathedumbguy.github.io/CalculatorExercise/"
+                              class="card-link fs-5"
+                              title="Live Page"
+                              target="_blank"
                               ><i class="bi bi-box-arrow-up-right"></i
                             ></a>
                           </div>
                         </header>
-                        <h5 class="card-title">Mini Project 1</h5>
+                        <h4 class="card-title">Calculator</h4>
                         <p class="card-text">
-                          Some quick example text to build on the card title and
-                          make up the bulk of the card's content.
+                          Calculator cloned from windows 10. It works decently,
+                          but it has a lot to improve on.
                         </p>
                         <ul class="d-flex gap-2 ps-0 flex-wrap">
                           <li class="list-unstyled">HTML</li>
                           <li class="list-unstyled">CSS</li>
                           <li class="list-unstyled">Bootstrap</li>
+                          <li class="list-unstyled">JavaScript</li>
                         </ul>
                       </div>
                     </div>
@@ -389,7 +405,7 @@
                             ></a>
                           </div>
                         </header>
-                        <h5 class="card-title">Mini Project 1</h5>
+                        <h4 class="card-title">Dummy</h4>
                         <p class="card-text">
                           Some quick example text to build on the card title and
                           make up the bulk of the card's content.
@@ -424,7 +440,7 @@
                             ></a>
                           </div>
                         </header>
-                        <h5 class="card-title">Mini Project 1</h5>
+                        <h4 class="card-title">Dummy</h4>
                         <p class="card-text">
                           Some quick example text to build on the card title and
                           make up the bulk of the card's content.
@@ -459,7 +475,7 @@
                             ></a>
                           </div>
                         </header>
-                        <h5 class="card-title">Mini Project 1</h5>
+                        <h4 class="card-title">Dummy</h4>
                         <p class="card-text">
                           Some quick example text to build on the card title and
                           make up the bulk of the card's content.
@@ -494,7 +510,7 @@
                             ></a>
                           </div>
                         </header>
-                        <h5 class="card-title">Mini Project 1</h5>
+                        <h4 class="card-title">Dummy</h4>
                         <p class="card-text">
                           Some quick example text to build on the card title and
                           make up the bulk of the card's content.
@@ -529,7 +545,7 @@
                             ></a>
                           </div>
                         </header>
-                        <h5 class="card-title">Mini Project 1</h5>
+                        <h4 class="card-title">Dummy</h4>
                         <p class="card-text">
                           Some quick example text to build on the card title and
                           make up the bulk of the card's content.
@@ -560,15 +576,13 @@
                 <!-- Content -->
                 <div class="mb-5">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Nobis facere mollitia, perspiciatis aut iusto nulla quaerat
-                    temporibus sunt itaque minima vel, rerum, sed neque saepe
-                    blanditiis iste corrupti optio id in ex placeat voluptates
-                    dolor ad vitae. Quidem, aliquam fugiat? Facilis ad enim ab
-                    dolorum beatae amet sapiente ducimus? Ex.
+                    I'm in desperate need of money. Hire me right now, or else
+                    you'll get a lifetime of bad luck. Papa Jesus won't love you
+                    anymore, and my mama will spank yo ass. Hire me! Now!
+                    Thanks! Lol.
                   </p>
                 </div>
-                <button id="sayHelloButton" class="btn btn-outline-info">
+                <button type="button" id="sayHelloButton" class="btn btns">
                   Say Hello
                 </button>
               </div>
