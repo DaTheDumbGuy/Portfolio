@@ -8,6 +8,21 @@ const activeContact = document.querySelector('#contactMeContainer');
 const aboutMeLink = document.querySelector('#aboutMeLink');
 const projectsLink = document.querySelector('#projectsLink');
 const contactLink = document.querySelector('#contactLink');
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card) => {
+  const cardTitle = card.querySelector(".card-title");
+
+  card.addEventListener("mouseover", function() {
+    cardTitle.style.color = "cyan";
+  });
+
+  card.addEventListener("mouseout", function() {
+    cardTitle.style.color = ""; // Reverts the color to the default
+  });
+});
+
 //Intersection Observer API technique
 // const navLinks = document.querySelector('#navLinks');
 // function isElementNearViewport(el, threshold) {
@@ -110,7 +125,7 @@ window.addEventListener("load", function () {
         document.getElementById("mainPage").style.display = "block";
         document.getElementById("loading").style.display = "none";
 
-    }, 2000); // Change 4000 to the number of milliseconds you want to delay
+    }, 2000);
 });
 // Add click event listener to each navbar link
 navbarLinks.forEach(link => {

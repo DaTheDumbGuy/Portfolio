@@ -1,5 +1,5 @@
 *{
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto Slab', serif;
 }
 /* Scroll Bar */
 /* width and height of the scrollbar */
@@ -351,7 +351,7 @@ aside{
     height: 1px;
 
   }
-    #introduction  h2{
+    #introduction  h1{
         font-size:2.5rem;
     }
     #introduction p {
@@ -385,7 +385,7 @@ aside{
         width: 100%;
         margin-top: 20px;
     }
-    #introduction  h2{
+    #introduction  h1{
         font-size: 3rem;
     }
     .profileContainer {
@@ -422,7 +422,7 @@ aside{
         width: 80%;
         margin-top: 0px;
     }
-    #introduction  h2{
+    #introduction  h1{
         font-size: 4rem;
     }
     #introduction  p{

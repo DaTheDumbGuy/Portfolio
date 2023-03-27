@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      div::before {
+        content: "";
+        position: absolute;
+        width: 105%;
+        height: 105%;
+        border-top: 5px solid cyan;
+        border-radius: 50%;
+        animation: a 0.5s linear infinite backwards;
+      }
+      @keyframes a {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      /* @keyframes b {
+        0% {
+          border-top: 1px solid cyan;
+        }
+        25% {
+          border-top: 1px solid cyan;
+          border-left: 1px solid cyan;
+        }
+        50% {
+          border-top: 1px solid cyan;
+          border-left: 1px solid cyan;
+          border-bottom: 1px solid cyan;
+        }
+        100% {
+          border-top: 1px solid cyan;
+          border-left: 1px solid cyan;
+          border-bottom: 1px solid cyan;
+          border-right: 1px solid cyan;
+        }
+      } */
+    </style>
+  </head>
+  <body style="background: black">
+    <div>
+      <img src="/img/logo.png" alt="" style="width: 90px" />
+    </div>
+  </body>
+</html>
