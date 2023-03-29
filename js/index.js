@@ -12,15 +12,15 @@ const contactLink = document.querySelector('#contactLink');
 const cards = document.querySelectorAll(".card");
 
 cards.forEach((card) => {
-  const cardTitle = card.querySelector(".card-title");
+    const cardTitle = card.querySelector(".card-title");
 
-  card.addEventListener("mouseover", function() {
-    cardTitle.style.color = "cyan";
-  });
+    card.addEventListener("mouseover", function () {
+        cardTitle.style.color = "cyan";
+    });
 
-  card.addEventListener("mouseout", function() {
-    cardTitle.style.color = ""; // Reverts the color to the default
-  });
+    card.addEventListener("mouseout", function () {
+        cardTitle.style.color = ""; // Reverts the color to the default
+    });
 });
 
 //Intersection Observer API technique
@@ -236,4 +236,11 @@ sayHelloButton.addEventListener("click", () => {
     const subject = "Greetings!";
     const body = "Hi there, Thank you for reaching out!";
     window.location.href = `mailto:darylbacurin14@gmail.com?subject=${subject}&body=${body}`;
+});
+
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 300);
 });
