@@ -238,9 +238,22 @@ sayHelloButton.addEventListener("click", () => {
     window.location.href = `mailto:darylbacurin14@gmail.com?subject=${subject}&body=${body}`;
 });
 
-// $(document).on('click', 'a[href^="#"]', function (event) {
-//     event.preventDefault();
-//     $('html, body').animate({
-//         scrollTop: $($.attr(this, 'href')).offset().top
-//     }, 100);
-// });
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Add click event listener to each anchor link
+    anchor.addEventListener('click', function (e) {
+        // Prevent default anchor click behavior
+        e.preventDefault();
+
+        // Get target element from anchor's href attribute
+        const target = document.querySelector(this.getAttribute('href'));
+
+        // Calculate distance from top of window to target element
+        const offsetTop = target.offsetTop;
+
+        // Animate smooth scroll to target element
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+    });
+});
