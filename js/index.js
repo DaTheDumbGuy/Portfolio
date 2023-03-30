@@ -238,9 +238,9 @@ sayHelloButton.addEventListener("click", () => {
     window.location.href = `mailto:darylbacurin14@gmail.com?subject=${subject}&body=${body}`;
 });
 
-$(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 100);
-});
+// $(document).on('click', 'a[href^="#"]', function (event) {
+//     event.preventDefault();
+//     $('html, body').animate({
+//         scrollTop: $($.attr(this, 'href')).offset().top
+//     }, 100);
+// });
