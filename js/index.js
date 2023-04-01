@@ -125,7 +125,7 @@ window.addEventListener("load", function () {
         document.getElementById("mainPage").style.display = "block";
         document.getElementById("loading").style.display = "none";
 
-    }, 2000);
+    }, 1000);
 });
 // Add click event listener to each navbar link
 navbarLinks.forEach(link => {
