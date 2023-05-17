@@ -82,6 +82,9 @@ cards.forEach((card) => {
 
 // window.addEventListener('scroll', debouncedOnScroll);
 
+function redirectResume() {
+    window.location.href = 'https://drive.google.com/file/d/1Ey8umvKehgfRKSv6X3X8C5GF4i1iqDIb/view?usp=sharing';
+}
 
 function isElementNearViewport(el, threshold) {// "scrollspy" technique.
     const rect = el.getBoundingClientRect();
