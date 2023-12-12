@@ -23,67 +23,8 @@ cards.forEach((card) => {
     });
 });
 
-//Intersection Observer API technique
-// const navLinks = document.querySelector('#navLinks');
-// function isElementNearViewport(el, threshold) {
-//     const rect = el.getBoundingClientRect();
-//     return (
-//         rect.top < window.innerHeight - threshold &&
-//         rect.bottom > threshold
-//     );
-// }
-
-// function debounce(func, wait) {
-//     let timeout;
-//     return function executedFunction(...args) {
-//         const later = () => {
-//             timeout = null;
-//             func(...args);
-//         };
-//         clearTimeout(timeout);
-//         timeout = setTimeout(later, wait);
-//     };
-// }
-
-// function onScroll() {
-//     if (isElementNearViewport(activeAbout, 250)) {
-//         aboutMeLink.classList.add('active');
-//     } else if (aboutMeLink.classList.contains('active')) {
-//         aboutMeLink.classList.remove('active');
-//     }
-
-//     if (isElementNearViewport(activeProjects, 400) || isElementNearViewport(activeProjects2, 180)) {
-//         projectsLink.classList.add('active');
-//     } else if (projectsLink.classList.contains('active')) {
-//         projectsLink.classList.remove('active');
-//     }
-
-//     if (isElementNearViewport(activeContact, 100)) {
-//         contactLink.classList.add('active');
-//     } else if (contactLink.classList.contains('active')) {
-//         contactLink.classList.remove('active');
-//     }
-// }
-
-// const debouncedOnScroll = debounce(onScroll, 100);
-
-// navLinks.addEventListener('click', function (event) {
-//     const target = event.target;
-//     if (target.matches('.nav-link')) {
-//         event.preventDefault();
-//         target.classList.add('active');
-//         navLinks.querySelectorAll('.nav-link').forEach(function (link) {
-//             if (link !== target && link.classList.contains('active')) {
-//                 link.classList.remove('active');
-//             }
-//         });
-//     }
-// });
-
-// window.addEventListener('scroll', debouncedOnScroll);
-
 function redirectResume() {
-    window.location.href = 'https://drive.google.com/file/d/1Ey8umvKehgfRKSv6X3X8C5GF4i1iqDIb/view?usp=sharing';
+    window.open('https://drive.google.com/file/d/15y84Fqr9s66dITQafmct1BtxTenGUNql/view?usp=sharing', '_blank');
 }
 
 function isElementNearViewport(el, threshold) {// "scrollspy" technique.
@@ -174,53 +115,6 @@ window.addEventListener('resize', () => {
     observer.thresholds = [getThreshold()];
 });
 
-//LazyloadingV.2 Test
-// const sections = document.querySelectorAll(".mainSection");
-// let observer;
-
-// function createObserver() {
-//     observer = new IntersectionObserver(
-//         entries => {
-//             entries.forEach(entry => {
-//                 entry.target.classList.toggle("show", entry.isIntersecting);
-//                 if (entry.isIntersecting) {
-//                     observer.unobserve(entry.target);
-//                 }
-//             });
-//         },
-//         {
-//             threshold: getThreshold(),
-//         }
-//     );
-
-//     sections.forEach(section => {
-//         observer.observe(section);
-//     });
-// }
-
-// function getThreshold() {
-//     const viewportWidth = window.innerWidth;
-//     if (viewportWidth < 768) {
-//         return 0.1;
-//     } else if (viewportWidth < 1100) {
-//         return 0.2;
-//     } else {
-//         return 0.4;
-//     }
-// }
-
-// createObserver();
-
-// window.addEventListener("resize", () => {
-//     observer.disconnect();
-//     observer.thresholds = [getThreshold()];
-//     sections.forEach(section => {
-//         observer.observe(section);
-//     });
-// });
-
-
-//https://github.com/mattboldt/typed.js
 // Typewriting
 let typed = new Typed("#nameTyped", {
     strings: [
